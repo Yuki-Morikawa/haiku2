@@ -13,7 +13,13 @@ end
 post '/new' do
   Contribution.create({
     name: params[:user_name],
-    body: params[:body]
+    body: params[:body],
+    haiku1: params[:haiku1],
+    haiku2: params[:haiku2],
+    haiku3: params[:haiku3],
+    haiku4: params[:haiku4],
+    haiku5: params[:haiku5],
+    author: params[:author]
   })
 
   redirect '/'
@@ -42,7 +48,14 @@ post '/renew/:id' do
   content = Contribution.find(params[:id])
   content.update({
     name: params[:user_name],
-    body: params[:body]
+    body: params[:body],
+    haiku1: params[:haiku1],
+    haiku2: params[:haiku2],
+    haiku3: params[:haiku3],
+    haiku4: params[:haiku4],
+    haiku5: params[:haiku5],
+    author: params[:author]
+    
   })
   redirect '/'
 end

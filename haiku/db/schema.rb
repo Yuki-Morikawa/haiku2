@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181206114700) do
+ActiveRecord::Schema.define(version: 20190425153041) do
 
   create_table "contributions", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(version: 20181206114700) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.integer  "good",       default: 0
+    t.string   "haiku1"
+    t.string   "haiku2"
+    t.string   "haiku3"
+    t.string   "haiku4"
+    t.string   "haiku5"
+    t.string   "author"
   end
 
 end
